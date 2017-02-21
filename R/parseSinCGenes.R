@@ -8,7 +8,7 @@ SinC_scafs$urls <- makeURLs(genesURL, SinC_scafs$scafs, SinC_scafs$start, SinC_s
 
 SinC_genes <- do.call('rbind', lapply(SinC_scafs$urls, function(url){
   print(url)
-  read.csv(url)[,c(1, 13, 4, 5)]
+  read.csv(url)[,c(1, 13, 4, 5, 7)]
 }))
 
 write.csv(SinC_genes, './data/sinC_genes.csv')
